@@ -1,0 +1,15 @@
+.gradle/
+build/
+/app/build/
+local.properties
+# Ключи подписи — только в секретах GitHub
+*.jks
+*.p12
+!app/fork.keystore
+*.keystore
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
