@@ -1,5 +1,7 @@
 package com.akira.island.island
 
+import androidx.compose.material.icons.rounded.Mic
+import androidx.compose.material.icons.rounded.Videocam
 import android.content.Context
 import android.os.Build
 import android.os.SystemClock

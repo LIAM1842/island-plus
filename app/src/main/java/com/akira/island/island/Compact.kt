@@ -2,6 +2,8 @@
 
 package com.akira.island.island
 
+import androidx.compose.material.icons.rounded.Mic
+import androidx.compose.material.icons.rounded.Videocam
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
