@@ -3,6 +3,10 @@ package com.akira.island.core
 /** Ивритские строки: ключ — английский текст из tr(ru, en). Нет перевода — показывается английский. */
 internal object HebrewStrings {
     val map: Map<String, String> = mapOf(
+    "Camera is in use" to "המצלמה בשימוש",
+    "Microphone is in use" to "המיקרופון בשימוש",
+    "Camera and microphone" to "מצלמה ומיקרופון",
+    "A green dot for the camera, an orange one for the microphone, like on iPhone" to "נקודה ירוקה למצלמה וכתומה למיקרופון, כמו באייפון",
     "Home" to "בית",
     "Features" to "תכונות",
     "Appearance" to "מראה",

@@ -143,6 +143,8 @@ data class IslandSettings(
     val evUsbOn: Boolean = true,
     val evUsbOff: Boolean = true,
     val evUnlock: Boolean = true,
+    /** Зелёная точка — камера, оранжевая — микрофон, как на iPhone */
+    val evPrivacy: Boolean = true,
     /** Разблокировка показывается анимацией Face ID, а не просто открытым замком */
     val evFaceId: Boolean = true,
     /** На экране блокировки в капсуле замок; после разблокировки он уходит */

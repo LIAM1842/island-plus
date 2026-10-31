@@ -130,6 +130,7 @@ fun ExpandedContent(act: Act, s: IslandSettings, lyrics: Lyrics?, battery: Batte
             is Act.TimerA -> TimerExpanded(act.t, s)
             is Act.StopwatchA -> StopwatchExpanded(act.w)
             is Act.TorchA -> Unit
+            is Act.PrivacyA -> PrivacyExpanded(act.p)
             is Act.ChronoA -> ChronoExpanded(act.c)
             is Act.ProgressA -> ProgressExpanded(act.p)
             is Act.ChargingA -> ChargingExpanded(act.b)

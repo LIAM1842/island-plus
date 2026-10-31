@@ -202,6 +202,11 @@ enum class NoticeStyle {
     FACEID,
 }
 
+/** Что сейчас использует камеру или микрофон (зелёная и оранжевая точка, как на iPhone) */
+data class PrivacyState(val camera: Boolean = false, val mic: Boolean = false) {
+    val any: Boolean get() = camera || mic
+}
+
 /** На экране — оплата телефоном: в каком приложении и его значок. Держится, пока не заплатили или не ушли. */
 data class PayReady(val pkg: String, val icon: ImageBitmap?)
 

@@ -78,6 +78,7 @@ class IslandService : AccessibilityService() {
     private val owner = OverlayLifecycleOwner()
     private var events: SystemEvents? = null
     private var torch: TorchController? = null
+    private var privacyMonitor: PrivacyMonitor? = null
     private var alarm: TimerAlarm? = null
     private var calls: CallMonitor? = null
     private var navReader: NavScreenReader? = null
@@ -185,6 +186,7 @@ class IslandService : AccessibilityService() {
         events = SystemEvents(this).also { it.start() }
         keyguardShown = keyguard?.isKeyguardLocked == true
         torch = TorchController(this).also { it.start() }
+        privacyMonitor = PrivacyMonitor(this).also { it.start() }
         alarm = TimerAlarm(this, scope).also { it.start() }
         calls = CallMonitor(this, scope).also { it.start() }
         navReader = NavScreenReader(this, scope)
@@ -643,6 +645,7 @@ class IslandService : AccessibilityService() {
         IslandTile.refresh(this)
         events?.stop()
         torch?.stop()
+        privacyMonitor?.stop()
         alarm?.stop()
         calls?.stop()
         navReader?.stop()

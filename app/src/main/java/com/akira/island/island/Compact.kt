@@ -219,6 +219,21 @@ fun CompactContent(act: Act, s: IslandSettings, wideWidth: Dp) {
             right = { GlowDot(Tints.Yellow, h * 0.26f, !s.reduceEffects) },
         )
 
+        is Act.PrivacyA -> CompactRow(h, gap, side * 1.3f,
+            left = {
+                Icon(
+                    if (act.p.camera) androidx.compose.material.icons.Icons.Rounded.Videocam else androidx.compose.material.icons.Icons.Rounded.Mic,
+                    null, tint = if (act.p.camera) Tints.Green else Tints.Orange, modifier = Modifier.size(icon),
+                )
+            },
+            right = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (act.p.camera) GlowDot(Tints.Green, h * 0.2f, !s.reduceEffects)
+                    if (act.p.mic) GlowDot(Tints.Orange, h * 0.2f, !s.reduceEffects)
+                }
+            },
+        )
+
         is Act.ProgressA -> CompactRow(h, gap, side,
             left = { AppIcon(act.p.icon, h * 0.56f, Ios.download, Tints.Blue) },
             right = {

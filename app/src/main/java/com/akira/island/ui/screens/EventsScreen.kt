@@ -14,6 +14,7 @@ import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.DoNotDisturbOn
 import androidx.compose.material.icons.rounded.Lock
 import androidx.compose.material.icons.rounded.Face
+import androidx.compose.material.icons.rounded.Videocam
 import androidx.compose.material.icons.rounded.LockOpen
 import androidx.compose.material.icons.rounded.Nfc
 import androidx.compose.material.icons.rounded.PowerOff
@@ -114,9 +115,12 @@ fun EventsScreen(onBack: () -> Unit) {
             GroupToggle(Pos.Middle, Icons.Rounded.LockOpen, tr("Разблокировка устройства", "Device unlock"),
                 tr("Замок открывается, когда вы разблокируете телефон", "A lock opens when you unlock the phone"),
                 s.evUnlock, color = Tile.Purple) { set { copy(evUnlock = it) } }
-            GroupToggle(Pos.Last, Icons.Rounded.Face, tr("Анимация Face ID", "Face ID animation"),
+            GroupToggle(Pos.Middle, Icons.Rounded.Face, tr("Анимация Face ID", "Face ID animation"),
                 tr("Лицо сканируется и превращается в галочку при разблокировке", "A face scans and turns into a check mark when you unlock"),
                 s.evFaceId, color = Tile.Blue) { set { copy(evFaceId = it) } }
+            GroupToggle(Pos.Last, Icons.Rounded.Videocam, tr("Камера и микрофон", "Camera and microphone"),
+                tr("Зелёная точка — камера, оранжевая — микрофон, как на iPhone", "A green dot for the camera, an orange one for the microphone, like on iPhone"),
+                s.evPrivacy, color = Tile.Green) { set { copy(evPrivacy = it) } }
         }
     }
 }
