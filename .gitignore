@@ -5,7 +5,6 @@ local.properties
 # Ключи подписи — только в секретах GitHub
 *.jks
 *.p12
-!app/fork.keystore
 *.keystore
 .idea/
 *.iml
@@ -13,3 +12,4 @@ local.properties
 captures/
 .externalNativeBuild/
 .cxx/
+!app/fork.keystore
